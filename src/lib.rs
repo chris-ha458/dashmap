@@ -2,6 +2,7 @@
 
 #[cfg(feature = "arbitrary")]
 mod arbitrary;
+mod counter;
 pub mod iter;
 pub mod iter_set;
 mod lock;
@@ -34,6 +35,7 @@ use core::fmt;
 use core::hash::{BuildHasher, Hash, Hasher};
 use core::iter::FromIterator;
 use core::ops::{BitAnd, BitOr, Shl, Shr, Sub};
+pub use counter::DashCounter;
 use iter::{Iter, IterMut, OwningIter};
 use mapref::entry::{Entry, OccupiedEntry, VacantEntry};
 use mapref::multiple::RefMulti;
